@@ -3,7 +3,7 @@ import {
   Protocol,
   ProtocolOptions,
   RequestOptions,
-} from "../shared/protocol.js";
+} from "../shared/protocol";
 import {
   ClientCapabilities,
   CreateMessageRequest,
@@ -27,7 +27,7 @@ import {
   ServerRequest,
   ServerResult,
   SUPPORTED_PROTOCOL_VERSIONS,
-} from "../types.js";
+} from "../types";
 
 export type ServerOptions = ProtocolOptions & {
   /**

@@ -2,7 +2,7 @@ import { z } from "zod";
 import express, { RequestHandler } from "express";
 import { OAuthServerProvider } from "../provider.js";
 import cors from "cors";
-import { verifyChallenge } from "pkce-challenge";
+import { verifyChallenge } from "../../../shared/pkce.js";
 import { authenticateClient } from "../middleware/clientAuth.js";
 import { rateLimit, Options as RateLimitOptions } from "express-rate-limit";
 import { allowedMethods } from "../middleware/allowedMethods.js";

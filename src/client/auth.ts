@@ -1,4 +1,4 @@
-import pkceChallenge from "pkce-challenge";
+import pkce from '../shared/pkce.js';
 import { LATEST_PROTOCOL_VERSION } from "../types.js";
 import type { OAuthClientMetadata, OAuthClientInformation, OAuthTokens, OAuthMetadata, OAuthClientInformationFull } from "../shared/auth.js";
 import { OAuthClientInformationFullSchema, OAuthMetadataSchema, OAuthTokensSchema } from "../shared/auth.js";
@@ -234,7 +234,7 @@ export async function startAuthorization(
   }
 
   // Generate PKCE challenge
-  const challenge = await pkceChallenge();
+  const challenge = await pkce();
   const codeVerifier = challenge.code_verifier;
   const codeChallenge = challenge.code_challenge;
 
